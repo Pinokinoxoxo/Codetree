@@ -9,28 +9,12 @@ int main() {
     sort(a.begin(), a.end());
     sort(b.begin(), b.end());
 
-    int n1 = a.length();
-    int n2 = b.length();
-    bool num = true;
-
-    if (a > b) {
-        for (int i = 0; i < n1; i++) {
-            if (a[i] != b[i]) {
-                cout << "No";
-                num = false;
-                break;
-            }
-        }
+    if (a.compare(b) == 0) {
+        cout << "Yes";
     }
     else {
-        for (int i = 0; i < n2; i++) {
-            if (a[i] != b[i]) {
-                cout << "No";
-                num = false;
-                break;
-            }
-        }
+        cout << "No";
     }
-    if (num) cout << "Yes";
+
     return 0;
 }
